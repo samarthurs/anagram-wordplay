@@ -5,13 +5,12 @@ import java.util.List;
 
 public class Permutation {
     public static void main(String[] args) {
-        String str = "JAVA";
-        int n = str.length();
+        String input = "JAVA";
+        int n = input.length();
         List<String> result = new ArrayList<>();
-        Permutation.permute(str, 0, n - 1, result);
+        Permutation.permute(input, 0, n - 1, result);
 
         System.out.println(result);
-        System.out.println(result.size());
     }
 
     /**
@@ -33,16 +32,16 @@ public class Permutation {
     }
 
     /**
-     * Swap Characters at position in the Char array
+     * Swap Characters in the Char array created by input String
      *
-     * @param a string value
+     * @param inputStr string value
      * @param i position 1
      * @param j position 2
      * @return swapped string
      */
-    public static String swap(String a, int i, int j) {
+    public static String swap(String inputStr, int i, int j) {
         char temp;
-        char[] charArray = a.toCharArray();
+        char[] charArray = inputStr.toCharArray();
         temp = charArray[i];
         charArray[i] = charArray[j];
         charArray[j] = temp;
